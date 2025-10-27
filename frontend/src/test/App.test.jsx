@@ -66,7 +66,7 @@ describe('Recipe Sharing App - Utility Functions', () => {
 
 describe('Recipe Sharing App - API Integration', () => {
   it('should construct correct API URLs', () => {
-    const baseUrl = 'http://localhost:5000'
+    const baseUrl = 'http://localhost:5001'
     const apiEndpoints = {
       getAllRecipes: `${baseUrl}/api/recipes`,
       getRecipe: (id) => `${baseUrl}/api/recipes/${id}`,
@@ -75,9 +75,9 @@ describe('Recipe Sharing App - API Integration', () => {
       deleteRecipe: (id) => `${baseUrl}/api/recipes/${id}`
     }
 
-    expect(apiEndpoints.getAllRecipes).toBe('http://localhost:5000/api/recipes')
-    expect(apiEndpoints.getRecipe(1)).toBe('http://localhost:5000/api/recipes/1')
-    expect(apiEndpoints.createRecipe).toBe('http://localhost:5000/api/recipes')
+    expect(apiEndpoints.getAllRecipes).toBe('http://localhost:5001/api/recipes')
+    expect(apiEndpoints.getRecipe(1)).toBe('http://localhost:5001/api/recipes/1')
+    expect(apiEndpoints.createRecipe).toBe('http://localhost:5001/api/recipes')
   })
 
   it('should handle API errors gracefully', async () => {
